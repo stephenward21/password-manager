@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { Button } from 'react-bootstrap';
 
-const Login = () =>{
-	return(
-		<div className="col-sm-6 "
+class Login extends Component {
+	render(){
+		return(
+			<div>
+				<h1> Login Page <h1>
+			</div>
 
-	)
+		)
+	}
+
 }
+
+
+export default Login;
