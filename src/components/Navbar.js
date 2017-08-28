@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Login from './components/Login';
+import Login from './Login';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
 	render(){
@@ -20,7 +21,7 @@ class Navbar extends Component {
 				    	<Link to="/" className="navbar-brand">StoreIt</Link>
 				    </div>
 					   <ul className="nav navbar-nav float-right">
-					   		{rightBar}
+					   		
 					   </ul>
 				  </div>
 				</nav>
