@@ -8,7 +8,7 @@ class App extends Component {
 	 return (
 	   <div className="App">
 	   	<Navbar />
-        <h1>Password Manager</h1>
+        <h1 className="home-title">Password Manager</h1>
 
 	
 	   </div>
