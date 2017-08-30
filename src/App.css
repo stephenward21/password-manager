@@ -42,3 +42,24 @@ li {
 .home-title {
   margin-top: 70px;
 }
+
+.register-form-name, .login-form-whole{
+  margin-top: 75px;
+}
+
+.register-wrapper, .login-wrapper{
+  display: block;
+  text-align: center;
+}
+
+.register-form-whole, .login-form-whole {
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 0;
+  text-align:left;
+}
+
+.empty-form {
+  width: 600px;
+}
+

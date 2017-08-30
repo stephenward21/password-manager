@@ -18,20 +18,21 @@ class Navbar extends Component {
 	    	<div>
 				<nav className="navbar navbar-default navbar-fixed-top">
 				  <div className="container-fluid navbar-white"	>
-				    <ul className="nav navbar-nav">
-				    	<li>Home</li>
-				    	<li>Register</li>
-				    	<li>Login</li>
-				    	<li>Accounts</li>
-				    	<li>Logout</li>
-
-				    </ul>
-				  </div>
-				  <div className="container">
+				  	<div className="container">
 				    <div className="navbar-header">
-				    	StoreIT
+				    	<ul className="nav navbar-nav">
+				    		<li><Link to = '/home'>StoreIT</Link></li>
+				    	</ul>
 				    	
 				    </div>
+				    <ul className="nav navbar-nav">
+				    	<li><Link to ='/home'>Home</Link></li>
+				    	<li><Link to ='/register'>Register</Link></li>
+				    	<li><Link to ='/login'>Login</Link></li>
+				    	<li><Link to ='/accounts'>Accounts</Link></li>
+				    </ul>
+				  </div>
+	
 
 				  </div>
 				</nav>
