@@ -23,6 +23,12 @@
   to { transform: rotate(360deg); }
 }
 
+body {
+  background: linear-gradient(rgba(35,35,35,0.5),rgba(35,35,35,0.5)), url('./images/containers.jpeg') no-repeat;
+  height: 100%;
+  background-size: cover;
+}
+
 li {
   margin-left: 20px;
   margin-top: 10px;
@@ -47,9 +53,11 @@ li {
   margin-top: 75px;
 }
 
+
 .register-wrapper, .login-wrapper{
   display: block;
   text-align: center;
+  
 }
 
 .register-form-whole, .login-form-whole {
@@ -57,6 +65,8 @@ li {
   margin-left: 0;
   margin-right: 0;
   text-align:left;
+/*  background-color: lightgreen;*/
+/*  padding: 40px;*/
 }
 
 .empty-form {
