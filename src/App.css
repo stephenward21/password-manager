@@ -29,6 +29,50 @@ body {
   background-size: cover;
 }
 
+.home-wrapper {
+/*  width: 100%;
+  position: relative;
+  background-color: #e2e0e0;
+  display: block;*/
+
+}
+
+.homer {
+  background-color: #e2e0e0;
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  margin-left: 350px;
+  margin-top: 200px;
+  opacity: .9;
+  text-align: center;
+  box-shadow: 10px #e2e0e0;  
+  /*border-radius: 5px;*/
+/*  margin-left: -50px;  margin is -0.5 * dimension 
+  margin-top: -25px;*/
+}
+
+.under-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: Goudy Old Style;
+  font-size: 16px;
+}
+
+.store {
+  font-family: American Typewriter;
+}
+
+.buttons {
+  margin-top: 70px;
+  display: inline-block;
+
+}
+
 li {
   margin-left: 20px;
   margin-top: 10px;

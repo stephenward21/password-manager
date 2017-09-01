@@ -21,12 +21,11 @@ class Navbar extends Component {
 				  	<div className="container">
 				    <div className="navbar-header">
 				    	<ul className="nav navbar-nav">
-				    		<li><Link to = '/home'>StoreIT</Link></li>
+				    		<li><Link to = '/'>StoreIT</Link></li>
 				    	</ul>
 				    	
 				    </div>
 				    <ul className="nav navbar-nav">
-				    	<li><Link to ='/home'>Home</Link></li>
 				    	<li><Link to ='/register'>Register</Link></li>
 				    	<li><Link to ='/login'>Login</Link></li>
 				    	<li><Link to ='/accounts'>Accounts</Link></li>
