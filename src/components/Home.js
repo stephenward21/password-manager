@@ -10,7 +10,14 @@ class Home extends Component {
 			blah: 'blah'
 		}
 		this.handleClick = this.handleClick.bind(this);
+		this.wrapperLoad = this.wrapperLoad.bind(this);
 		
+	}
+
+	wrapperLoad(){
+		setInterval(function(){
+			$('.home-wrapper').css('visibility', 'visible')
+		}, 1000)
 	}
 
 	handleClick(){
@@ -26,8 +33,10 @@ class Home extends Component {
 
 	
 	render(){
+		this.wrapperLoad
+
 		return(
-			<div className="home-wrapper">
+			<div className="home-wrapper" onLoad={this.wrapperLoad}>
 				<div className="homer">
 					<h1 className="store"> StoreIT<br></br><p className="under-title">The ultimate password storage application</p> </h1>
 					<p> Do you ever have problems remembering your passwords?? I know I do!<br></br>

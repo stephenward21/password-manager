@@ -30,10 +30,7 @@ body {
 }
 
 .home-wrapper {
-/*  width: 100%;
-  position: relative;
-  background-color: #e2e0e0;
-  display: block;*/
+  visibility: hidden;
 
 }
 
