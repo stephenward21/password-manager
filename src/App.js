@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import Register from './components/Register';
 import Home from './components/Home';
+import Accounts from './components/Accounts'
 
 
 
@@ -17,6 +18,7 @@ class App extends Component {
 		   	<Route exact path="/register" component={Register} />
 		   	<Route exact path="/login" component={Login} />
 		   	<Route exact path="/" component={Home} />
+		   	<Route exact path="/accounts" component={Accounts} />
 		
 		   </div>
 		</Router>

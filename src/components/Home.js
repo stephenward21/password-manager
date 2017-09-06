@@ -15,9 +15,9 @@ class Home extends Component {
 	}
 
 	wrapperLoad(){
-		setInterval(function(){
-			$('.home-wrapper').css('visibility', 'visible')
-		}, 1000)
+		$(window).load(function(){
+			$('.home-wrapper').css('visibility', 'visible');
+		})
 	}
 
 	handleClick(){
