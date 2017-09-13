@@ -123,6 +123,15 @@ li {
   box-shadow: 10px #e2e0e0;  
 }
 
+.selector {
+  width: 610px;
+  margin: auto;
+}
+
+.Select-clear {
+  display: none;
+}
+
 .empty-form {
   width: 600px;
 }

@@ -12,24 +12,29 @@ var options = [
 ];
 
 
+
+
 class Accounts extends Component {
 	constructor(props) {
 		super(props);
-		this.state ={
+		this.state = {
 			options: []
 		}
 		this.logChange = this.logChange.bind(this)
 	}
 
-	logChange(val) {
-	  console.log("Selected: " + JSON.stringify(val));
+	logChange(val) {	
+	  console.log("Selected: " + val.value)
 	  this.setState({
 	  	options: val.value
 	  })
 	}
+
+
 	
 
 	render(){
+
 		//if user has logged in and everything has been confirmed
 		// if / else statements using props
 
@@ -38,7 +43,7 @@ class Accounts extends Component {
 		return (
 			<div className="accounts-wrapper">
 				<h2> Select Account Type </h2>
-				<Select name="form-field-name" value={this.state.options} options={options} onChange={this.logChange} />
+				<Select className="selector" name="form-field-name" value={this.state.options} options={options} onChange={this.logChange} />
 				<Form horizontal className="login-form-whole">
 					<FormGroup controlId="formHorizontalName">
 						<Col componentClass={ControlLabel} sm={2} className="account">
