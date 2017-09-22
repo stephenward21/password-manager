@@ -45,6 +45,7 @@ body {
   opacity: .9;
   text-align: center;
   box-shadow: 10px #e2e0e0;  
+  border-radius: 10px;
   /*border-radius: 5px;*/
 /*  margin-left: -50px;  margin is -0.5 * dimension 
   margin-top: -25px;*/
@@ -112,9 +113,10 @@ li {
 
 .accounts-wrapper {
   background-color: #e2e0e0;
+  border-radius: 10px;
   display: block;
   position: absolute;
-  width: 50%;
+  width: 700px;
   height: 75%;
   margin-left: 350px;
   margin-top: 150px;

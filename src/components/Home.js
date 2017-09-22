@@ -9,18 +9,16 @@ class Home extends Component {
 		this.state = {
 			blah: 'blah'
 		}
-		this.handleClick = this.handleClick.bind(this);
-		this.wrapperLoad = this.wrapperLoad.bind(this);
 		
 	}
 
-	wrapperLoad(){
+	wrapperLoad = () => {
 		$(window).load(function(){
 			$('.home-wrapper').css('visibility', 'visible');
 		})
 	}
 
-	handleClick(){
+	handleClick = () => {
 		$('.homer').css({
     		'transform': 'translateX(100vw)',
     		'transition': '4s',

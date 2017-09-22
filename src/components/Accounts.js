@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import { Form, FormGroup, ControlLabel, FormControl, Button, Col ,MenuItem} from 'react-bootstrap';
+import $ from 'jquery';
 
 var options = [
   { value: 'banking', label: 'Banking' },
@@ -20,20 +21,33 @@ class Accounts extends Component {
 		this.state = {
 			options: []
 		}
-		this.logChange = this.logChange.bind(this)
+
 	}
 
-	logChange(val) {	
+	logChange = (val) => {	
 	  console.log("Selected: " + val.value)
 	  this.setState({
 	  	options: val.value
 	  })
 	}
 
+	showPassword = () => {
+		$("#showHide").click(function() {
+		    if ($(".password").attr("type") == "password") {
+		      $(".password").attr("type", "text");
+
+		    } else {
+		      $(".password").attr("type", "password");
+		    }
+		});
+
+	}
+
 
 	
 
 	render(){
+		console.log(window)
 
 		//if user has logged in and everything has been confirmed
 		// if / else statements using props
@@ -72,9 +86,11 @@ class Accounts extends Component {
 					</FormGroup>
 					<FormGroup>
 						<Col sm={10}>
-							<FormControl className="empty-form" type="password" name="password" placeholder="Password" />
+							<FormControl className="password empty-form" type="password" name="password" placeholder="Password" onChange={this.showPassword} />
 						</Col>
 					</FormGroup>
+						<input type="checkbox" id="showHide" />
+      					<label id="showHideLabel">Show Password</label>
 					<FormGroup>
 						<Col smOffset={2} sm={10}>
 							<Button className="register-form-button" bsStyle="default" bsSize="small" type="submit">
