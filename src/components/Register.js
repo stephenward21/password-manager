@@ -3,13 +3,83 @@ import { Form, FormGroup, ControlLabel, FormControl, Button, Col ,MenuItem} from
 // import {bindActionCreators} from 'redux';
 // import RegisterAction from '../actions/RegisterAction';
 // import {connect} from 'react-redux';
+class Register extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			registerMessage: "",
+			nameError: null,
+			emailError: null,
+			formError: false
+		};
+		this.handleRegistration = this.handleRegistration.bind(this);
+	}
 
-class Register extends Component{
+	handleRegistration(event){
+		event.preventDefault();
+		console.log('user submitted form')
+		var name =event.target[0].value;
+		var email =event.target[1].value;
+		var address =event.target[2].value;
+		var city =event.target[3].value;
+		var state =event.target[4].value;
+		var password =event.target[5].value;
+		var error = false;
+
+		//name
+		if(name.length < 3){
+			var nameError = 'error';
+			error=true;
+		}else{
+			var nameError = 'success'
+		}
+
+		//email
+		if(email.length < 3){
+			var emailError = "error";
+			error=true;
+		}else{
+			emailError = 'success'
+		}
+
+		if(error){
+			this.setState({
+				formError: true,
+				emailError: emailError,
+				nameError: nameError
+			})
+		}else{
+			this.props.registerAction({
+				name: name,
+				email: email,
+				address: address,
+				city: city,
+				state: state,
+				password: password
+			});
+		}
+	}
+
+	componentWillUpdate(nextProps){
+		console.log(nextProps.registerResponse);
+		console.log(this.props);
+		if(nextProps.registerResponse.msg === 'userInserted'){
+			this.props.history.push('/home');
+		}else if(nextProps.registerResponse.msg === 'userAlreadyExists'){
+			console.log('used');
+			this.setState({
+				registerMessage: 'Sorry, this username is taken'
+			})
+		}
+	}
+
+
+
 	render(){
 		return(
 			<div className="register-wrapper">
 				<h1 className="register-registerMessage"></h1>
-				<Form horizontal className="register-form-whole">
+				<Form horizontal className="register-form-whole" onSubmit={this.handleRegistration}>
 					<FormGroup className="register-form-name"controlId="formHorizontalName" >
 						<Col  componentClass={ControlLabel} sm={2}>
 							Name
