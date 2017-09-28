@@ -29,10 +29,10 @@ body {
   background-size: cover;
 }
 
-/*.home-wrapper {
-  visibility: hidden;
+.home-wrapper {
+  display: none;
 
-}*/
+}
 
 .homer {
   background-color: #e2e0e0;

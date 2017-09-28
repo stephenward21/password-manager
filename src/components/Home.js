@@ -12,10 +12,15 @@ class Home extends Component {
 		
 	}
 
+	componentDidMount() {
+		window.addEventListener('load', this.wrapperLoad);
+		
+	}
+
 	wrapperLoad = () => {
-		$(window).load(function(){
-			$('.home-wrapper').css('visibility', 'visible');
-		})
+		setTimeout(function(){
+			$('.home-wrapper').fadeIn();
+		}, 2500);
 	}
 
 	handleClick = () => {
@@ -31,10 +36,9 @@ class Home extends Component {
 
 	
 	render(){
-		this.wrapperLoad
 
 		return(
-			<div className="home-wrapper" onLoad={this.wrapperLoad}>
+			<div className="home-wrapper" >
 				<div className="homer">
 					<h1 className="store"> StoreIT<br></br><p className="under-title">The ultimate password storage application</p> </h1>
 					<p> Do you ever have problems remembering your passwords?? I know I do!<br></br>
