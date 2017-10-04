@@ -17,13 +17,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/register', function(req,res,next){
+router.post('/register', (req,res) =>{
 	const name = req.body.name;
     const email = req.body.email;
     const address = req.body.address;
     const city = req.body.city;
     const state = req.body.state;
     const password = bcrypt.hashSync(req.body.password);
+    console.log(name)
 
 
     // const checkEmail = new Promise((resolve,reject)=>{

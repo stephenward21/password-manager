@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Form, FormGroup, ControlLabel, FormControl, Button, Col ,MenuItem} from 'react-bootstrap';
-// import {bindActionCreators} from 'redux';
-// import RegisterAction from '../actions/RegisterAction';
-// import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import registerAction from '../actions/registerAction';
+import {connect} from 'react-redux';
+
+
 class Register extends Component {
 	constructor(props){
 		super(props);
@@ -18,6 +20,7 @@ class Register extends Component {
 	handleRegistration(event){
 		event.preventDefault();
 		console.log('user submitted form')
+		console.log(window.hostAddress)
 		var name =event.target[0].value;
 		var email =event.target[1].value;
 		var address =event.target[2].value;
@@ -144,4 +147,17 @@ class Register extends Component {
 	}
 }
 
-export default Register;
+function mapStateToProps(state){
+	return{
+		registerResponse: state.registerReducer
+	}
+}
+
+function mapDispatchToProps(dispatch){
+	return bindActionCreators({
+		registerAction: registerAction
+	},dispatch)
+}
+
+// export default Register;
+export default connect(mapStateToProps, mapDispatchToProps)(Register);
